@@ -145,7 +145,7 @@ function App() {
       {/* Seção The College Dropout */}
       <section id="college-dropout" className="section">
         <h2 style={{ color: h2Color }}>The College Dropout</h2>
-        <img className="album-image" src="./Kanye1.jpg" alt="Capa de The College Dropout" />
+        <img className="album-image" src="./kanye1.jpg" alt="Capa de The College Dropout" />
         <p style={{ color: pColor }}>
           "The College Dropout" é o primeiro álbum de Kanye West, lançado em 2004. O álbum conta com hits como: "All Falls Down", "Spaceship" e "Jesus Walks".
         </p>
