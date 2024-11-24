@@ -1,0 +1,190 @@
+/* Estilo básico para o layout */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+  }
+  
+ 
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh; 
+    transition: background-color 0.3s ease; 
+    color: #333;
+    padding: 20px;
+  }
+  
+  /* Estilo para o header */
+  .header {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .header h1 {
+    font-size: 2.5em;
+    color: inherit;
+  }
+  
+  .containerInput {
+    margin-top: 20px;
+  }
+  
+  input {
+    padding: 10px;
+    font-size: 1.2em;
+    margin-right: 10px;
+  }
+  
+  button {
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #FF9800;
+
+  }
+  
+  .section {
+    width: 80%;
+    max-width: 1000px;
+    margin-bottom: 40px;
+    text-align: center;
+    background-color: inherit;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity:0;
+    transform: translateY(100px);
+    transition: opacity 0.6s ease-out,transform 0.6s ease-out;
+  }
+
+  .section.visible {
+    opacity: 1;
+    transform: translateY(0);
+
+  }
+
+  .section h2{
+    font-size: bold;
+    color: black;
+    font-size: 50px;
+    z-index: 10;
+
+  }
+
+  .section p{
+    font-size: bold;
+    color: inherit;
+    font-weight: bolder;
+    z-index: 10;
+  }
+  
+  .album-image {
+    max-width: 100%;
+    height: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    right: 100px;
+    transition: transform 1.0s;
+    border-radius: 20px;
+  }
+  
+  .album-image:hover {
+    transform: scale(1.1);
+  }
+
+
+  .mbdtf-image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+
+  .album-image {
+    width: 70%; 
+    transition: transform 0.5s ease-in-out;
+    z-index: 1;
+  }
+
+  .side-image {
+    width: 20%;
+    opacity: 0.7;
+    transition: opacity 0.3s ease-in-out;
+    cursor:pointer ;
+  }
+
+  .side-image:hover {
+    opacity: 1;
+  }
+
+    .arrow {
+    background-color: transparent;
+    border: none;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+  }
+
+  .left {
+    left: 10px;
+    border-radius: 20px;
+  }
+
+  .right {
+    right: 10px;
+    border-radius: 20px;
+  }
+
+  .mbdtf-image-container img {
+    margin: 0 15px;
+  }
+
+  .mbdtf-image-container img:hover {
+    opacity: 1.2;
+  }
+
+  .platform-icon {
+    width: 50px;
+    margin: 10px;
+    transition: transform 0.3s;
+  }
+  
+  .platform-icon:hover {
+    transform: scale(1.1);
+  }
+  
+  
+  @media (max-width: 768px) {
+    .container {
+      padding: 10px;
+    }
+  
+    .section {
+      width: 100%;
+    }
+  
+    .platform-icon {
+      width: 40px;
+    }
+  }
+  
