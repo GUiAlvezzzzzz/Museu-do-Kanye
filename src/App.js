@@ -245,7 +245,7 @@ function App() {
          <img className="platform-icon" src="/apple.png" alt="Apple Music" />
         </a>
       </section>
-       {/* Seção Watch */}
+       {/* Seção Watch The Throne*/}
       <section id="Watch" className="section">
         <h2 style={{ color: h2Color }}>Watch The Throne</h2>
         <img className="album-image" src="/Watch.jpg" alt="Capa de Watch The Throne" />
