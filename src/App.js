@@ -145,7 +145,7 @@ function App() {
       {/* Seção The College Dropout */}
       <section id="college-dropout" className="section">
         <h2 style={{ color: h2Color }}>The College Dropout</h2>
-        <img className="album-image" src="/Kanye1.jpg" alt="Capa de The College Dropout" />
+        <img className="album-image" src="./Kanye1.jpg" alt="Capa de The College Dropout" />
         <p style={{ color: pColor }}>
           "The College Dropout" é o primeiro álbum de Kanye West, lançado em 2004. O álbum conta com hits como: "All Falls Down", "Spaceship" e "Jesus Walks".
         </p>
@@ -252,7 +252,7 @@ function App() {
         <p style={{ color: pColor }}>
           "Watch The Throne" é o sexto álbum de Kanye West, lançado em colaboração com o Rapper JAY-Z,lançado em 2011. O álbum inclui faixas como "No Church In The Wild", "Ni**as In Paris" e "Why I Love You".
         </p>
-        <a href="https://open.spotify.com/album/7zsi1qDCT0DCqWnq0uMGWa">
+        <a href="https://open.spotify.com/intl-pt/album/0OcMap99vLEeGkBCfCwRwS?si=OTZyWGw8T_21_4LABs_d0A">
           <img className="platform-icon" src="/spotify.png" alt="Spotify" />
         </a>
         <a href="https://music.apple.com/us/album/graduation/1440835365">
@@ -266,7 +266,7 @@ function App() {
         <p style={{ color: pColor }}>
           "Yeezus" é o sétimo álbum de Kanye West, lançado em 2013. O álbum inclui faixas como "On Sight", "Black Skinhead" e "Bound 2".
         </p>
-        <a href="https://open.spotify.com/intl-pt/album/7D2NdGvBHIavgLhmcwhluK?si=YmAO4QqZRRqpd3EQta4-Pw">
+        <a href="https://open.spotify.com/intl-pt/album/7D2NdGvBHIavgLhmcwhluK?si=N-1yvl95R76Qe1a8BcddMQ">
           <img className="platform-icon" src="/spotify.png" alt="Spotify" />
         </a>
         <a href="https://music.apple.com/us/album/graduation/1440835365">
