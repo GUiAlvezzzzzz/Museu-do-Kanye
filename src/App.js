@@ -74,7 +74,7 @@ function App() {
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
 
-    // Remove o ouvinte de evento ao desmontar o componente
+    
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
