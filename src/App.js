@@ -20,6 +20,14 @@ function App() {
     '/MBDTF6.webp',
     '/MBDTF7.webp'
   ];
+
+  const [DondaImageIndex, setDondaImageIndex] = useState(0);
+
+  const DondaImages = [
+    '/donda.jpg',
+    '/donda2.jpg',
+    '/donda3.jpg',
+  ];
   
   const musicas = [
     { album: 'The College Dropout', musica: './through-the-wire.mp3' },
@@ -28,7 +36,12 @@ function App() {
     { album: '808s & Heartbreak', musica: './Heartless.mp3' },
     { album: 'My Beautiful Dark Twisted Fantasy', musica: './All-Of-The-Lights.mp3' },
     { album: 'Watch The Throne', musica: './In-Paris.mp3' },
-    { album: 'Yezzus', musica: './On-Sight.mp3' }
+    { album: 'Yezzus', musica: './On-Sight.mp3' },
+    { album: 'Pablo', musica: './Wolves.mp3' },
+    { album: 'Violent Crimes', musica: './violent-crimes.mp3' },
+    { album: 'Cudi Montage', musica: './cudi-montage.mp3'  },
+    { album: 'Closed On Sunday', musica: './closed-on-sunday.mp3' },
+    { album: 'Moon', musica: './Moon.mp3' }
   ];
   
   const handleScroll = () => {
@@ -59,14 +72,41 @@ function App() {
       seth2Color('white'); // Cor do texto para "MBDTF"
       setpColor('white');
       setMusicaAtual(musicas[4].musica);
-    } else if (scrollPosition >= 4400 && scrollPosition < 5500)        {setBackgroundColor('#CD7F32'); // "WATCH"
+    } else if (scrollPosition >= 4400 && scrollPosition < 5500)        
+      {setBackgroundColor('#CD7F32'); // "WATCH"
       seth2Color('white'); // Cor do texto para "WATCH"
       setpColor('white');
       setMusicaAtual(musicas[5].musica);
-    } else {setBackgroundColor('#FFF'); // "YEZZUS"
+    } else if (scrollPosition >= 5500 && scrollPosition < 6500) 
+      {setBackgroundColor('#FFF'); // "YEZZUS"
       seth2Color('red'); // Cor do texto para "YEZZUS"
       setpColor('red');
       setMusicaAtual(musicas[6].musica);
+    } else if (scrollPosition >= 6500 && scrollPosition < 7600) 
+      {setBackgroundColor('#FF7F50'); // "PABLO"
+      seth2Color('black'); // Cor do texto para "PABLO"
+      setpColor('black');
+      setMusicaAtual(musicas[7].musica);
+    } else if (scrollPosition >= 7600 && scrollPosition < 8600) 
+      {setBackgroundColor('#020D3F'); // "ye"
+      seth2Color('#50CF01'); // Cor do texto para "ye"
+      setpColor('#50CF01');
+      setMusicaAtual(musicas[8].musica);
+    } else if (scrollPosition >= 8600 && scrollPosition < 9600) 
+      {setBackgroundColor('yellow'); // "kids"
+      seth2Color('black'); // Cor do texto para "kids"
+      setpColor('black');
+      setMusicaAtual(musicas[9].musica);
+    } else if (scrollPosition >= 9601 && scrollPosition < 10600) 
+      {setBackgroundColor('white'); // "JIK"
+      seth2Color('blue'); // Cor do texto para "JIK"
+      setpColor('blue');
+      setMusicaAtual(musicas[10].musica);
+    } else if (scrollPosition >= 10600 && scrollPosition < 11600) 
+      {setBackgroundColor('Black'); // "DONDA"
+      seth2Color('white'); // Cor do texto para "DONDA"
+      setpColor('white');
+      setMusicaAtual(musicas[11].musica);
     }
   };
 
@@ -82,17 +122,21 @@ function App() {
 
   const nextImage = () => {
     setMbdtfImageIndex((prevIndex) => (prevIndex + 1) % mbdtfImages.length);
+    setDondaImageIndex((prevIndex) => (prevIndex + 1) % DondaImages.length);
   };
 
   const prevImage = () => {
     setMbdtfImageIndex((prevIndex) => (prevIndex - 1 + mbdtfImages.length) % mbdtfImages.length);
+    setDondaImageIndex((prevIndex) => (prevIndex - 1 + DondaImages.length) % DondaImages.length);
   };
+
+
 
   // Inicialização do AOS (Animações ao rolar)
   useEffect(() => {
     AOS.init({
-      duration: 2000, // Duração da animação
-      easing: 'ease-out', // Tipo de transição
+      duration: 2000, 
+      easing: 'ease-out', 
     });
   }, []);
 
@@ -105,7 +149,7 @@ function App() {
           entry.target.classList.add('visible');
         }
       });
-    }, { threshold: 0.5 }); // Se a seção estiver 50% visível
+    }, { threshold: 0.5 }); 
 
     sections.forEach((section) => {
       observer.observe(section);
@@ -259,8 +303,8 @@ function App() {
           <img className="platform-icon" src="/apple.png" alt="Apple Music" />
         </a>
       </section>
-
-      <section id="TESTE" className="section">
+      {/* Seção YEZZUS*/}
+      <section id="Yezzus" className="section">
         <h2 style={{ color: h2Color }}>Yeezus </h2>
         <img className="album-image" src="/YEZZUS1.jpg" alt="Capa de YEZZUS" /> 
         <p style={{ color: pColor }}>
@@ -273,6 +317,104 @@ function App() {
           <img className="platform-icon" src="/apple.png" alt="Apple Music" />
         </a>
       </section>
+      {/* Seção PABLO*/}
+      <section id="The-Life-Of-Pablo" className="section">
+        <h2 style={{ color: h2Color }}>The Life Of Pablo </h2>
+        <img className="album-image" src="/life.jpg" alt="Capa de The Life Of Pablo" /> 
+        <p style={{ color: pColor }}>
+          "The Life of Pablo" é o oitavo álbum de Kanye West, lançado em 2016. O álbum inclui faixas como "Ultralight Beam", "Father Sretch My Hands Pt.1" e "Famous".
+        </p>
+        <a href="https://open.spotify.com/intl-pt/album/7D2NdGvBHIavgLhmcwhluK?si=N-1yvl95R76Qe1a8BcddMQ">
+          <img className="platform-icon" src="/spotify.png" alt="Spotify" />
+        </a>
+        <a href="https://music.apple.com/us/album/graduation/1440835365">
+          <img className="platform-icon" src="/apple.png" alt="Apple Music" />
+        </a>
+      </section>
+      {/* Seção YE*/}
+      <section id="ye" className="section">
+        <h2 style={{ color: h2Color }}>ye </h2>
+        <img className="album-image" src="/ye.jpg" alt="Capa de ye" /> 
+        <p style={{ color: pColor }}>
+          "ye" é o nono álbum de Kanye West, lançado em 2018. O álbum inclui faixas como "All Mine", "Ghost Town" e "Violent Crimes".
+        </p>
+        <a href="https://open.spotify.com/intl-pt/album/7D2NdGvBHIavgLhmcwhluK?si=N-1yvl95R76Qe1a8BcddMQ">
+          <img className="platform-icon" src="/spotify.png" alt="Spotify" />
+        </a>
+        <a href="https://music.apple.com/us/album/graduation/1440835365">
+          <img className="platform-icon" src="/apple.png" alt="Apple Music" />
+        </a>
+      </section>
+      {/* Seção KIDS SEE GHOST*/}
+      <section id="Kids" className="section">
+        <h2 style={{ color: h2Color }}>KIDS SEE GHOSTS </h2>
+        <img className="album-image" src="/kids.jpg" alt="Capa de Kids See Ghosts" /> 
+        <p style={{ color: pColor }}>
+          "KIDS SEE GHOSTS" é o décimo álbum de Kanye West, lançado em 2018. O álbum inclui faixas como "Fire", "Reborn" e "Kids See Ghosts".
+        </p>
+        <a href="https://open.spotify.com/intl-pt/album/7D2NdGvBHIavgLhmcwhluK?si=N-1yvl95R76Qe1a8BcddMQ">
+          <img className="platform-icon" src="/spotify.png" alt="Spotify" />
+        </a>
+        <a href="https://music.apple.com/us/album/graduation/1440835365">
+          <img className="platform-icon" src="/apple.png" alt="Apple Music" />
+        </a>
+      </section>
+      {/* Seção JESUS IS KING*/}
+      <section id="JIK" className="section">
+        <h2 style={{ color: h2Color }}>JESUS IS KING</h2>
+        <img className="album-image" src="/JIK.jpg" alt="Capa de JESUS IS KING" /> 
+        <p style={{ color: pColor }}>
+          "JESUS IS KING" é o décimo primeiro álbum de Kanye West, lançado em 2019. O álbum inclui faixas como "Follow God", "Closed On Sunday" e "God Is".
+        </p>
+        <a href="https://open.spotify.com/intl-pt/album/7D2NdGvBHIavgLhmcwhluK?si=N-1yvl95R76Qe1a8BcddMQ">
+          <img className="platform-icon" src="/spotify.png" alt="Spotify" />
+        </a>
+        <a href="https://music.apple.com/us/album/graduation/1440835365">
+          <img className="platform-icon" src="/apple.png" alt="Apple Music" />
+        </a>
+      </section>
+       {/* Seção DONDA*/}
+       <section id="Donda" className="section">
+       <h2 style={{ color: 'white' }}>Donda</h2>
+        <div className="donda-image-container">
+        <button className="arrow left" onClick={prevImage}>{"<"}</button>
+
+        {/* Imagem da esquerda */}
+          <img
+            className={`side-image ${DondaImageIndex === 0 ? "left-image" : ""}`}
+            src={DondaImages[(DondaImageIndex - 1 + DondaImages.length) % DondaImages.length]}
+            alt="Imagem lateral de MBDTF"
+            />
+
+       {/* Imagem central */}
+          <img
+            className={`album-image ${DondaImageIndex === 0 ? "visible" : ""}`}
+            src={DondaImages[DondaImageIndex]}
+            alt="Capa de MBDTF"
+          />
+
+        {/* Imagem da direita */}
+         <img
+            className={`side-image ${DondaImageIndex === 0 ? "right-image" : ""}`}
+            src={DondaImages[(DondaImageIndex + 1) % DondaImages.length]}
+            alt="Imagem lateral de MBDTF"
+          />
+
+        <button className="arrow right" onClick={nextImage}>{">"}</button>
+        </div>
+
+        
+        <p style={{ color: pColor }}>
+          "Donda" é o décimo segundo álbum de Kanye West, lançado em 2021. O álbum inclui faixas como "Jail", "Off The Grind", "Hurricane", "Praise God", e "Moon".
+        </p>
+        <a href="https://open.spotify.com/intl-pt/album/7D2NdGvBHIavgLhmcwhluK?si=N-1yvl95R76Qe1a8BcddMQ">
+          <img className="platform-icon" src="/spotify.png" alt="Spotify" />
+        </a>
+        <a href="https://music.apple.com/us/album/graduation/1440835365">
+          <img className="platform-icon" src="/apple.png" alt="Apple Music" />
+        </a>
+      </section>
+
 
     </div>
   );

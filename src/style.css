@@ -116,6 +116,16 @@
     margin: 0 auto;
   }
 
+  .donda-image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+
   .album-image {
     width: 70%; 
     transition: transform 0.5s ease-in-out;
