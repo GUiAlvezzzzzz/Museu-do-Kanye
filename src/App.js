@@ -37,7 +37,7 @@ function App() {
     { album: 'My Beautiful Dark Twisted Fantasy', musica: './All-Of-The-Lights.mp3' },
     { album: 'Watch The Throne', musica: './In-Paris.mp3' },
     { album: 'Yezzus', musica: './On-Sight.mp3' },
-    { album: 'Pablo', musica: './Wolves.mp3' },
+    { album: 'Pablo', musica: './wolves.mp3' },
     { album: 'Violent Crimes', musica: './violent-crimes.mp3' },
     { album: 'Cudi Montage', musica: './cudi-montage.mp3'  },
     { album: 'Closed On Sunday', musica: './closed-on-sunday.mp3' },
