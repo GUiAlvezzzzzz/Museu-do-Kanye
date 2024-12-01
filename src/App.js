@@ -107,7 +107,17 @@ function App() {
       seth2Color('white'); // Cor do texto para "DONDA"
       setpColor('white');
       setMusicaAtual(musicas[11].musica);
-    }
+    } else if (scrollPosition >= 11600 && scrollPosition < 12600) 
+      {setBackgroundColor('#d4d1be'); // "VULTURES 1"
+      seth2Color('black'); // Cor do texto para "VULTURES 1"
+      setpColor('black');
+      setMusicaAtual(musicas[11].musica);
+    } else if (scrollPosition >= 12600 && scrollPosition < 13600) 
+      {setBackgroundColor('#CEC6B3'); // "VULTURES 2"
+      seth2Color('black'); // Cor do texto para "VULTURES 2"
+      setpColor('black');
+      setMusicaAtual(musicas[11].musica);
+      }
   };
 
   // Adiciona o ouvinte de evento de scroll quando o componente for montado
@@ -383,21 +393,21 @@ function App() {
           <img
             className={`side-image ${DondaImageIndex === 0 ? "left-image" : ""}`}
             src={DondaImages[(DondaImageIndex - 1 + DondaImages.length) % DondaImages.length]}
-            alt="Imagem lateral de MBDTF"
+            alt="Imagem lateral de DONDA"
             />
 
        {/* Imagem central */}
           <img
             className={`album-image ${DondaImageIndex === 0 ? "visible" : ""}`}
             src={DondaImages[DondaImageIndex]}
-            alt="Capa de MBDTF"
+            alt="Capa de DONDA"
           />
 
         {/* Imagem da direita */}
          <img
             className={`side-image ${DondaImageIndex === 0 ? "right-image" : ""}`}
             src={DondaImages[(DondaImageIndex + 1) % DondaImages.length]}
-            alt="Imagem lateral de MBDTF"
+            alt="Imagem lateral de DONDA"
           />
 
         <button className="arrow right" onClick={nextImage}>{">"}</button>
@@ -415,6 +425,35 @@ function App() {
         </a>
       </section>
 
+      {/* Seção Vultures1*/}
+      <section id="VULTURES 1" className="section">
+        <h2 style={{ color: h2Color }}>VULTURES 1</h2>
+        <img className="album-image" src="/vultures1.png" alt="Capa alternativa de VULTURES" /> 
+        <p style={{ color: pColor }}>
+          "VULTURES 1" é o décimo terceiro álbum de Kanye West, lançado em 2024. O álbum inclui faixas como "KEYS TO MY LIFE", "BURN" e "CARNIVAL".
+        </p>
+        <a href="https://open.spotify.com/intl-pt/album/7D2NdGvBHIavgLhmcwhluK?si=N-1yvl95R76Qe1a8BcddMQ">
+          <img className="platform-icon" src="/spotify.png" alt="Spotify" />
+        </a>
+        <a href="https://music.apple.com/us/album/graduation/1440835365">
+          <img className="platform-icon" src="/apple.png" alt="Apple Music" />
+        </a>
+      </section>
+
+      {/* Seção Vultures2*/}
+      <section id="VULTURES 2" className="section">
+        <h2 style={{ color: h2Color }}>VULTURES 2</h2>
+        <img className="album-image" src="/vultures2.jpg" alt="Capa de VULTURES 2" /> 
+        <p style={{ color: pColor }}>
+          "VULTURES 2" é o décimo quarto álbum de Kanye West, é a continuação do álbum anterior "VULTURES 1" lançado em 2024. O álbum inclui faixas como "FIELD TRIP", "FOREVER" e "530".
+        </p>
+        <a href="https://open.spotify.com/intl-pt/album/7D2NdGvBHIavgLhmcwhluK?si=N-1yvl95R76Qe1a8BcddMQ">
+          <img className="platform-icon" src="/spotify.png" alt="Spotify" />
+        </a>
+        <a href="https://music.apple.com/us/album/graduation/1440835365">
+          <img className="platform-icon" src="/apple.png" alt="Apple Music" />
+        </a>
+      </section>
 
     </div>
   );
