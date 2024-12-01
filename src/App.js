@@ -117,7 +117,7 @@ function App() {
       seth2Color('black'); // Cor do texto para "VULTURES 2"
       setpColor('black');
       setMusicaAtual(musicas[11].musica);
-      }
+    }
   };
 
   // Adiciona o ouvinte de evento de scroll quando o componente for montado
