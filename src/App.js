@@ -41,7 +41,9 @@ function App() {
     { album: 'Violent Crimes', musica: './violent-crimes.mp3' },
     { album: 'Cudi Montage', musica: './cudi-montage.mp3'  },
     { album: 'Closed On Sunday', musica: './closed-on-sunday.mp3' },
-    { album: 'Moon', musica: './Moon.mp3' }
+    { album: 'Moon', musica: './Moon.mp3' },
+    { album: 'Burn', musica: './BURN.mp3' },
+    { album: '530', musica: './530.mp3' }
   ];
   
   const handleScroll = () => {
@@ -111,12 +113,12 @@ function App() {
       {setBackgroundColor('#d4d1be'); // "VULTURES 1"
       seth2Color('black'); // Cor do texto para "VULTURES 1"
       setpColor('black');
-      setMusicaAtual(musicas[11].musica);
+      setMusicaAtual(musicas[12].musica);
     } else if (scrollPosition >= 12600 && scrollPosition < 13600) 
       {setBackgroundColor('#CEC6B3'); // "VULTURES 2"
       seth2Color('black'); // Cor do texto para "VULTURES 2"
       setpColor('black');
-      setMusicaAtual(musicas[11].musica);
+      setMusicaAtual(musicas[13].musica);
     }
   };
 
